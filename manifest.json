@@ -1,7 +1,7 @@
 {
   "name": "Woords!",
   "description": "英単語をダブルクリックすると指定した辞書サイトを同時に開きます。",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "manifest_version": 3,
   "icons": {
     "16": "./images/pdict16.png",

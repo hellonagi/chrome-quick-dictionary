@@ -19,23 +19,6 @@ const clickHandler = (e) => {
   })
 }
 
-const deleteHistory = (e) => {
-  e.stopPropagation()
-  chrome.storage.local.get('history', (res) => {
-    for (let i = 0; i < res.history.length; i++) {
-      if (
-        res.history[i].word1 ===
-        e.target.parentNode.querySelector('.word1').innerHTML
-      ) {
-        e.target.parentNode.remove()
-        res.history.splice(i, 1)
-        chrome.storage.local.set({ history: res.history })
-        break
-      }
-    }
-  })
-}
-
 const addList = (page) => {
   const dictBox = document.createElement('li')
 
@@ -112,6 +95,25 @@ const getHistoryNum = (e) => {
 
   const maxNum = document.querySelector('#maxNum')
   maxNum.innerHTML = e.target.value
+}
+
+const deleteHistory = (e) => {
+  e.stopPropagation()
+  chrome.storage.local.get('history', (res) => {
+    for (let i = 0; i < res.history.length; i++) {
+      if (
+        res.history[i].word1 ===
+        e.target.parentNode.querySelector('.word1').innerHTML
+      ) {
+        e.target.parentNode.remove()
+        res.history.splice(i, 1)
+        chrome.storage.local.set({ history: res.history })
+        const curNum = document.querySelector('#curNum')
+        curNum.innerHTML = parseInt(curNum.innerHTML) - 1 + ''
+        break
+      }
+    }
+  })
 }
 
 const deleteAllHistory = (e) => {
