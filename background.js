@@ -15,10 +15,40 @@ chrome.runtime.onInstalled.addListener(() => {
         open: true,
       },
       {
-        id: 'webej',
-        name: 'Weblio英和辞典',
+        id: 'oxee',
+        name: "Oxford Learner's Dictionaries E-E",
+        url: 'https://www.oxfordlearnersdictionaries.com/definition/english/fabulous?q=',
+        open: false,
+      },
+      {
+        id: 'dcee',
+        name: 'Dictionary.com E-E',
+        url: 'https://www.dictionary.com/browse/',
+        open: false,
+      },
+      {
+        id: 'wbej',
+        name: 'Weblio英和辞典 E-J',
         url: 'https://ejje.weblio.jp/content/',
         open: true,
+      },
+      {
+        id: 'thsa',
+        name: 'Thesaurus.com: Synonyms and Antonyms of Words',
+        url: 'https://www.thesaurus.com/browse/',
+        open: false,
+      },
+      {
+        id: 'oxcd',
+        name: 'OXFORD Collocation Dictionary',
+        url: 'https://www.freecollocation.com/search?word=',
+        open: false,
+      },
+      {
+        id: 'urdc',
+        name: 'Urban Dictionary',
+        url: 'https://www.urbandictionary.com/define.php?term=',
+        open: false,
       },
       {
         id: 'gimg',

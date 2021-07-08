@@ -1,7 +1,7 @@
 {
-  "name": "Woords!",
-  "description": "英単語をダブルクリックすると指定した辞書サイトを同時に開きます。",
-  "version": "0.1.1",
+  "name": "一括英単語検索",
+  "description": "Webページ上の英単語をダブルクリックすると指定した辞書サイトを一括で開きます。英単語の意味の違いを検索することもできます。",
+  "version": "0.1.2",
   "manifest_version": 3,
   "icons": {
     "16": "./images/pdict16.png",
@@ -13,7 +13,7 @@
     "service_worker": "background.js"
   },
   "action": {
-    "default_title": "Woords!",
+    "default_title": "一括英単語検索",
     "default_icon": {
       "16": "./images/pdict16.png",
       "32": "./images/pdict32.png",
@@ -31,6 +31,5 @@
     }
   ],
   "options_page": "options.html",
-  "permissions": ["tabs", "storage"],
-  "host_permissions": ["<all_urls>"]
+  "permissions": ["tabs", "storage"]
 }
