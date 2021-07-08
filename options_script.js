@@ -41,7 +41,6 @@ const openDictDiff = (e) => {
   const type = e.currentTarget.querySelector('.type').innerHTML
   const word1 = e.currentTarget.querySelector('.word1').innerHTML
   const word2 = e.currentTarget.querySelector('.word2').innerHTML
-  console.log(e.currentTarget.querySelector('.word1').innerHTML)
   if (type === 'dict') {
     chrome.runtime.sendMessage({ message: 'open_tabs', payload: word1 })
   } else if (type === 'diff') {
@@ -50,6 +49,28 @@ const openDictDiff = (e) => {
       payload: { word1: word1, word2: word2 },
     })
   }
+}
+
+const createSVG = (d1, d2) => {
+  const ns = 'http://www.w3.org/2000/svg'
+  const svg = document.createElementNS(ns, 'svg')
+  svg.id = 'searchIcon'
+  svg.setAttribute('height', 16)
+  svg.setAttribute('width', 16)
+  svg.setAttribute('viewBox', '0 0 24 24')
+  svg.setAttribute('fill', '#111')
+
+  const path1 = document.createElementNS(ns, 'path')
+  path1.setAttribute('d', d1)
+  path1.setAttribute('fill', 'none')
+
+  const path2 = document.createElementNS(ns, 'path')
+  path2.setAttribute('d', d2)
+
+  svg.appendChild(path1)
+  svg.appendChild(path2)
+
+  return svg
 }
 
 const addHistory = (history) => {
@@ -72,11 +93,15 @@ const addHistory = (history) => {
   date.className = 'date'
   date.innerHTML = history.date
 
-  const deleteIcon = document.createElement('img')
+  const deleteIcon = createSVG(
+    'M0 0h24v24H0V0z',
+    'M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z'
+  )
+  // const deleteIcon = document.createElement('img')
   deleteIcon.id = 'deleteIcon'
-  deleteIcon.src = './images/clear_black_24dp.svg'
-  deleteIcon.width = 20
-  deleteIcon.height = 20
+  // deleteIcon.src = './images/clear_black_24dp.svg'
+  // deleteIcon.width = 20
+  // deleteIcon.height = 20
   deleteIcon.onclick = deleteHistory
 
   histBox.appendChild(type)
