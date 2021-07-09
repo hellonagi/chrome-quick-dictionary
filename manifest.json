@@ -1,0 +1,36 @@
+{
+  "name": "Woords!",
+  "description": "英単語をダブルクリックすると指定した辞書サイトを同時に開きます。",
+  "version": "0.1.0",
+  "manifest_version": 3,
+  "icons": {
+    "16": "./images/pdict16.png",
+    "32": "./images/pdict32.png",
+    "48": "./images/pdict48.png",
+    "128": "./images/pdict128.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Woords!",
+    "default_icon": {
+      "16": "./images/pdict16.png",
+      "32": "./images/pdict32.png",
+      "48": "./images/pdict48.png",
+      "128": "./images/pdict128.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["foreground.js"],
+      "css": ["foreground_styles.css"],
+      "all_frames": true,
+      "run_at": "document_end"
+    }
+  ],
+  "options_page": "options.html",
+  "permissions": ["tabs", "storage"],
+  "host_permissions": ["<all_urls>"]
+}

@@ -1,0 +1,78 @@
+#pupBox {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+
+  font-size: 14px;
+  position: absolute;
+  z-index: 999;
+  background-color: #f0f0ff;
+  border: 2px dolid #ddf;
+  box-shadow: 0px 0px 10px 0.5px black;
+  font-family: Google Sans, arial, sans-serif;
+}
+
+#labelW1,
+#labelW2 {
+  display: flex;
+  align-items: center;
+  height: 20px;
+}
+
+#word1,
+#word2 {
+  padding-left: 2px;
+  width: 100px;
+  line-height: 20px;
+  height: 20px;
+  font-size: 12px;
+  border: 1px solid #aaa;
+  box-sizing: border-box;
+}
+#word1:focus,
+#word2:focus {
+  outline: none;
+}
+
+#dictButton,
+#diffButton {
+  width: 40px;
+  height: 20px;
+  cursor: pointer;
+  border: 1px solid #aaa;
+  border-radius: 0px;
+  vertical-align: middle;
+  font-size: 12px;
+  box-sizing: border-box;
+  background-color: #eee;
+}
+
+#dictButton:hover,
+#diffButton:hover {
+  background-color: #ddd;
+}
+
+#dictButton:active,
+#diffButton:active {
+  background-color: #eee;
+}
+
+#dictButton:disabled,
+#diffButton:disabled {
+  cursor: default;
+  background-color: #eee;
+}
+
+#optionLink {
+  margin-top: 8px;
+  margin-left: auto;
+  font-size: 11px;
+  text-align: right;
+  cursor: pointer;
+  color: #1111cc;
+}
+
+#optionLink:hover {
+  text-decoration: underline;
+  background-color: transparent;
+}

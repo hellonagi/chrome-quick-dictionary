@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="options_styles.css" />
+    <title>Woords! Option</title>
+  </head>
+  <body>
+    <div id="main">
+      <h1>Woords!</h1>
+      <hr />
+      <h2>辞書</h2>
+      <ul id="dictList"></ul>
+      <h2>Diff検索</h2>
+      <ul id="diffList"></ul>
+      <h2>履歴</h2>
+      <div id="selectHistoryNum">
+        <span>履歴保存件数</span>
+        <span>
+          <select name="historyNum" id="historyNum">
+            <option value="30">30</option>
+            <option value="50">50</option>
+            <option value="100">100</option>
+            <option value="200">200</option>
+            <option value="200">1000</option>
+          </select>
+          件
+        </span>
+      </div>
+      <div id="deleteAll">
+        <div id="deleteBox">
+          <img width="20" height="20" src="./images/delete_black_24dp.svg" />
+          <span>全削除</span>
+        </div>
+      </div>
+      <div id="showHistoryNum"></div>
+
+      <ul id="history"></ul>
+    </div>
+    <footer>
+      <p>© 2021 hellonagi</p>
+      <p>Licensed under GNU AGPL v3</p>
+    </footer>
+    <script src="./options_script.js"></script>
+  </body>
+</html>

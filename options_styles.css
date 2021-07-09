@@ -1,0 +1,92 @@
+body {
+  background-color: #eee;
+  font-size: 0.8em;
+}
+h1 {
+  text-align: center;
+  margin: 10px 0px;
+  font-size: 1.6em;
+}
+h2 {
+  margin: 0px 5px;
+  font-size: 1.2em;
+  font-weight: 400;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 6px 0px;
+}
+li {
+  height: 1.8em;
+}
+#main {
+  position: relative;
+  margin: 0px auto;
+  padding: 5px 10px;
+  width: 400px;
+  background-color: white;
+  border: 1px solid #dde;
+  border-radius: 5px;
+}
+footer {
+  text-align: center;
+  margin-top: 10px;
+}
+footer > p {
+  margin: 1px;
+}
+#selectHistoryNum {
+  margin: 0 5px;
+  display: flex;
+  justify-content: space-between;
+}
+#deleteAll {
+  margin: 2px 4px;
+  width: 70px;
+}
+#deleteBox {
+  display: flex;
+  align-items: center;
+  background-color: #eef;
+  border: 1px solid #ddf;
+  border-radius: 5px;
+}
+#deleteBox:hover {
+  background-color: #f6f6ff;
+  cursor: pointer;
+}
+#showHistoryNum {
+  text-align: center;
+}
+#history > li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#history > li:hover {
+  background-color: #f6f6fa;
+  cursor: pointer;
+}
+#history > li > div {
+  margin-left: 4px;
+}
+#deleteIcon:hover {
+  background-color: #eee;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.word1 {
+  flex-grow: 1;
+}
+.word2 {
+  flex-grow: 1;
+}
+.type {
+  width: 20px;
+  background-color: #e1e1e6;
+  padding: 0px 4px;
+  border: 2px solid #ddf;
+  border-radius: 5px;
+  font-size: 0.9em;
+}
